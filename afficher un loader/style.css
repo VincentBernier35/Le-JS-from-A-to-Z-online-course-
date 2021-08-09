@@ -1,0 +1,47 @@
+::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #333;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff
+}
+.container-loader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s ease;
+}
+.loader {
+    border: 16px solid #f3f3f3; 
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.fondu-out {
+    opacity: 0;
+}
+h1 {
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 100px;
+    padding-top: 150px;
+}
